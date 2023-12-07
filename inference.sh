@@ -1,0 +1,6 @@
+# set audio and text prompt, change the interpolate rate
+# python txt2img.py --prompt "A photo of beautiful beach with blue sky" --plms --ckpt "models/ldm/stable-diffusion-v1/sd-v1-4.ckpt" --n_samples 1 --n_iter 1 --skip_grid --outdir "./outputs/txt2img-samples/" --interpolate 1 --pt_file_name "inference1_video" --audio "audio_sample/fire.wav" --audio_time 5  --se_value 5 --threshold_value 0.95 --param_t 800
+python txt2img.py --prompt "A photo of a beautiful garden with blue sky" --plms --ckpt "../sound/stable-diffusion/models/ldm/stable-diffusion-v1/sd-v1-4.ckpt" --n_samples 1 --n_iter 1 --skip_grid --outdir "./outputs/txt2img-samples/" --interpolate 1 --pt_file_name "inference1_video" --audio "audio_sample/water.wav" --audio_time 5  --se_value 7 --threshold_value 0.8 --param_t 900 --skip_first
+
+# with image input
+# python img2img.py --prompt "A photo of a beautiful garden with sky" --ckpt "/models/ldm/stable-diffusion-v1/sd-v1-4.ckpt" --n_samples 1 --n_iter 1 --skip_grid --outdir "./outputs/img2img-samples/" --interpolate 1 --pt_file_name "inference2_img" --audio "audio_sample/water.wav" --audio_time 5 --se_value 10 --threshold_value 0.95 --param_t 950 --init-img "./night.png" --scale 1.5
